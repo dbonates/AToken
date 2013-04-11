@@ -36,6 +36,8 @@
 		3775811C17161AC700558B7A /* CredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3775811B17161AC700558B7A /* CredentialStore.m */; };
 		3775811F1716289200558B7A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3775811E1716289200558B7A /* LoginViewController.m */; };
 		3775812117162A3000558B7A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3775812017162A3000558B7A /* QuartzCore.framework */; };
+		377ABE9D1716733000D9E31A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377ABE9C1716733000D9E31A /* SystemConfiguration.framework */; };
+		377ABE9F1716736400D9E31A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377ABE9E1716736400D9E31A /* MobileCoreServices.framework */; };
 		37BCCA8117162AFF000F59EC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BCCA8017162AFF000F59EC /* Security.framework */; };
 		37BCCA8417162C91000F59EC /* AuthAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BCCA8317162C91000F59EC /* AuthAPIClient.m */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,8 @@
 		3775811D1716289200558B7A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3775811E1716289200558B7A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3775812017162A3000558B7A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		377ABE9C1716733000D9E31A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		377ABE9E1716736400D9E31A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		37BCCA8017162AFF000F59EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		37BCCA8217162C91000F59EC /* AuthAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthAPIClient.h; sourceTree = "<group>"; };
 		37BCCA8317162C91000F59EC /* AuthAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthAPIClient.m; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377ABE9F1716736400D9E31A /* MobileCoreServices.framework in Frameworks */,
+				377ABE9D1716733000D9E31A /* SystemConfiguration.framework in Frameworks */,
 				37BCCA8117162AFF000F59EC /* Security.framework in Frameworks */,
 				3775812117162A3000558B7A /* QuartzCore.framework in Frameworks */,
 				377580C91716156100558B7A /* UIKit.framework in Frameworks */,
@@ -135,6 +141,8 @@
 		377580C71716156100558B7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				377ABE9E1716736400D9E31A /* MobileCoreServices.framework */,
+				377ABE9C1716733000D9E31A /* SystemConfiguration.framework */,
 				37BCCA8017162AFF000F59EC /* Security.framework */,
 				3775812017162A3000558B7A /* QuartzCore.framework */,
 				377580C81716156100558B7A /* UIKit.framework */,

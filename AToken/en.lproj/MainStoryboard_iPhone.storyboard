@@ -9,57 +9,53 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8h-KR-OF8">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Clear Token">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearToken:" destination="2" eventType="touchUpInside" id="gl5-pL-5aa"/>
-                                    <action selector="getThere:" destination="2" eventType="touchUpInside" id="uJO-bB-CMe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDW-8D-Oss">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Get there!">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xha-MP-0By">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xha-MP-0By">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="371" id="8nQ-JQ-Zhk"/>
+                                    <constraint firstAttribute="height" constant="403" id="wZ1-jg-Vt6"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="RHJ-TD-ibG">
+                                <items>
+                                    <barButtonItem title="Users" id="aQx-3c-huf">
+                                        <connections>
+                                            <action selector="getUsers:" destination="2" id="g70-PU-cnP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fhh-lg-3UJ"/>
+                                    <barButtonItem title="Login" id="Lgm-Gh-hRm">
+                                        <connections>
+                                            <action selector="getThere:" destination="2" id="Xog-Rt-sfv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ECI-wB-ql6"/>
+                                    <barButtonItem title="Logout" id="mcQ-P6-NnW">
+                                        <connections>
+                                            <action selector="clearToken:" destination="2" id="bT3-VO-djr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xha-MP-0By" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="0pt-kr-ZUn"/>
-                            <constraint firstItem="EDW-8D-Oss" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8JJ-ex-IW4"/>
-                            <constraint firstItem="xha-MP-0By" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BCN-6f-NWB"/>
-                            <constraint firstItem="EDW-8D-Oss" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="Wdm-qv-MuF"/>
-                            <constraint firstItem="b8h-KR-OF8" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XAc-VI-b42"/>
-                            <constraint firstAttribute="trailing" secondItem="b8h-KR-OF8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cSQ-zP-OZh"/>
-                            <constraint firstAttribute="trailing" secondItem="xha-MP-0By" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dFb-YE-n7i"/>
-                            <constraint firstItem="b8h-KR-OF8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dZw-cR-L6V"/>
-                            <constraint firstAttribute="trailing" secondItem="EDW-8D-Oss" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eMv-fb-fkG"/>
+                            <constraint firstItem="xha-MP-0By" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="23J-2j-U5T"/>
+                            <constraint firstItem="xha-MP-0By" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="C1U-eu-kb4"/>
+                            <constraint firstItem="RHJ-TD-ibG" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="JQt-F7-0cM"/>
+                            <constraint firstItem="RHJ-TD-ibG" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="OjB-Uf-rPC"/>
+                            <constraint firstItem="xha-MP-0By" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="n2W-MT-6lu"/>
+                            <constraint firstItem="RHJ-TD-ibG" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="xKw-uw-1eT"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="infogetBtn" destination="Lgm-Gh-hRm" id="VfS-AY-KYa"/>
                         <outlet property="logText" destination="xha-MP-0By" id="Xkt-RX-g1T"/>
                     </connections>
                 </viewController>
@@ -71,39 +67,62 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="fOa-b5-ooq" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yi1-2U-7cn">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-rV-8ts">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-rV-8ts">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-bE-nwJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="secret" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-bE-nwJ">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfi-Z1-pg3">
+                                <color key="tintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Login" id="Lfw-Pe-AeH">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="CWz-JL-feC"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Go!" id="8oH-js-R0u"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RAB-rV-8ts" firstAttribute="leading" secondItem="Yi1-2U-7cn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4hT-Me-akF"/>
+                            <constraint firstItem="qfi-Z1-pg3" firstAttribute="leading" secondItem="Yi1-2U-7cn" secondAttribute="leading" type="default" id="9Vl-HZ-bvu"/>
+                            <constraint firstItem="XoX-bE-nwJ" firstAttribute="top" secondItem="Yi1-2U-7cn" secondAttribute="top" constant="107" id="EeZ-as-E4U"/>
                             <constraint firstItem="XoX-bE-nwJ" firstAttribute="leading" secondItem="Yi1-2U-7cn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Hfh-Si-AyJ"/>
-                            <constraint firstItem="RAB-rV-8ts" firstAttribute="top" secondItem="Yi1-2U-7cn" secondAttribute="top" constant="37" id="WZF-r8-c4a"/>
+                            <constraint firstItem="qfi-Z1-pg3" firstAttribute="trailing" secondItem="Yi1-2U-7cn" secondAttribute="trailing" type="default" id="RqI-gp-TtM"/>
+                            <constraint firstItem="RAB-rV-8ts" firstAttribute="top" secondItem="Yi1-2U-7cn" secondAttribute="top" constant="63" id="WTe-xb-0YY"/>
                             <constraint firstAttribute="trailing" secondItem="XoX-bE-nwJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lXm-3g-y8H"/>
-                            <constraint firstItem="XoX-bE-nwJ" firstAttribute="top" secondItem="Yi1-2U-7cn" secondAttribute="top" constant="81" id="qZq-6R-Lzf"/>
+                            <constraint firstItem="qfi-Z1-pg3" firstAttribute="top" secondItem="Yi1-2U-7cn" secondAttribute="top" type="default" id="o1c-Xq-X02"/>
                             <constraint firstAttribute="trailing" secondItem="RAB-rV-8ts" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ut5-hk-ZZh"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="navController" destination="Lfw-Pe-AeH" id="jDo-aD-Uy8"/>
                         <outlet property="passwordField" destination="XoX-bE-nwJ" id="7Tw-xN-TcP"/>
                         <outlet property="usernameField" destination="RAB-rV-8ts" id="Ts7-rv-pae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZg-wf-0Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453" y="798"/>
+            <point key="canvasLocation" x="497" y="174"/>
         </scene>
     </scenes>
     <classes>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navController" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -111,6 +130,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="clearToken:"/>
+                <relationship kind="action" name="getThere:"/>
+                <relationship kind="action" name="getUsers:"/>
+                <relationship kind="outlet" name="infogetBtn" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="logText" candidateClass="UITextView"/>
             </relationships>
         </class>

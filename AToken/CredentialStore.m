@@ -24,6 +24,8 @@
 - (void)clearSavedCredentials
 {
     [self setAuthToken:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"token-expired" object:self];
+
 }
 - (NSString *)authToken
 {
@@ -32,6 +34,7 @@
 - (void)setAuthToken:(NSString *)authToken
 {
     [self setSecureValue:authToken forKey:AUTH_TOKEN_KEY];
+    if (authToken) [[NSNotificationCenter defaultCenter] postNotificationName:@"token-changed" object:self];
 }
 
 // salva e recupera o auth_token no keychain

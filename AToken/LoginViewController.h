@@ -13,6 +13,7 @@
 
 @interface LoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *navController;
 @property (nonatomic, strong) CredentialStore *credentialStore;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -20,5 +21,7 @@
 
 - (void)login:(id)sender;
 - (void)cancel:(id)sender;
+
+- (NSString *)getValueForKeyFromJsonObject:(NSString *)key jsonObject:(id)jsonObject;
 
 @end

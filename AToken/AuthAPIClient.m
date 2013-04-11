@@ -29,9 +29,26 @@
     self = [super initWithBaseURL:url];
     if (self) {
         [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+        [self setAuthTokenHeader];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(tokenChanged:)
+                                                     name:@"token-changed"
+                                                   object:nil];
     }
     return self;
+}
+
+- (void)tokenChanged:(NSNotification *)notification
+{
+    [self setAuthTokenHeader];
+}
+
+- (void)setAuthTokenHeader
+{
+    CredentialStore *store = [[CredentialStore alloc] init];
+    NSString *authToken = [store authToken];
+    [self setDefaultHeader:@"auth_token" value:authToken];
 }
 
 @end
