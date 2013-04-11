@@ -1,0 +1,8 @@
+
+
+CredentialStore
+
+Wrapper para armazenar informações de login usando keychain via SSKeychain
+
+salvando o token evita o processo de login desnecessário, uma vez recebido, fica armazenado para logar novamente ou buscar informações disponíveis para esse token. Caso ele tenha expirado, aí sim, fazemos novamente o login. Isso permite verificar de tempos em tempos se o usuário ainda está válido no sistema.
+

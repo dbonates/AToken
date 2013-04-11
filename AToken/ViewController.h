@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class CredentialStore;
+
 @interface ViewController : UIViewController
+
+
+@property (nonatomic, strong) CredentialStore *credentialStore;
+@property (weak, nonatomic) IBOutlet UITextView *logText;
+
+- (IBAction)getThere:(id)sender;
+- (IBAction)clearToken:(id)sender;
 
 @end

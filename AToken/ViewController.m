@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "CredentialStore.h"
+
+
 
 @interface ViewController ()
 
@@ -17,7 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    
+    self.credentialStore = [[CredentialStore alloc] init];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +32,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)getThere:(id)sender {
+    if ([self.credentialStore isLoggedIn]) {
+        //
+    }
+    else
+    {
+        UIStoryboard *sb = self.storyboard;
+        
+    }
+}
+
+- (IBAction)clearToken:(id)sender {
+}
+
 
 @end
